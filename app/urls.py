@@ -10,5 +10,6 @@ router.register('account', viewset=views.AccountViewSet, basename='account')
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('accrual/', views.AccrualView.as_view(), name='accrual')
 ]

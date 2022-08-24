@@ -46,3 +46,20 @@ class Account(models.Model):
     def __str__(self):
         return self.name
 
+
+class Accrual(models.Model):
+    date = models.DateField(verbose_name='дата')
+
+    class Meta:
+        verbose_name = 'Долг'
+        verbose_name_plural = 'Долги'
+        ordering = ['date']
+
+
+class Payment(models.Model):
+    date = models.DateField(verbose_name='дата')
+
+    class Meta:
+        verbose_name = 'Платеж'
+        verbose_name_plural = 'Платежи'
+        ordering = ['date']
