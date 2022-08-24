@@ -9,6 +9,7 @@ from .serializers import AccountSerializer
 
 
 class AccountViewSet(viewsets.ReadOnlyModelViewSet):
+    """Task one"""
     serializer_class = AccountSerializer
     queryset = Account.objects.all()
 
@@ -37,6 +38,7 @@ class AccountViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class AccrualView(APIView):
+    """Task two"""
 
     def get(self, request):
         # result = {}
